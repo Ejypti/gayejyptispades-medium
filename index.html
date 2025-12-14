@@ -30,27 +30,14 @@
     overflow-x: hidden; /* optional: prevent horizontal scrolling */
   }
 
-  /* Background image fade-in layer */
-  body::before{
-    content: "";
-    position: absolute;
-    opacity: 0;
-    animation: fadeBG 1.8s ease-out forwards;
-  }
-
-  @keyframes fadeBG {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
 
   /* --- SPADE LOGO ANIMATION --- */
   #spadeLogo {
     position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 20px;
-    top: 10px;
-    transform: translate(-25%, -25%);
+    width: 200px;
+    height: 200px;
+    left: 85px;
+    top: 100px;
     opacity: 0;
 
     transition:
@@ -68,11 +55,10 @@
 
   /* Final position after moving to top */
   #spadeLogo.toTop {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     top: 10px;
-    left: 20px;
-    transform: translate(-25%, 0);
+    left: 10px;
   }
 
 
@@ -84,7 +70,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 80px;
+  font-size: 32px;
   font-weight: bold;
   color: gold;
   opacity: 0;
@@ -109,8 +95,8 @@
   inset: 0;
   background: rgba(0,0,0,0.0);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   opacity: 0;
   transition: opacity 1s ease;
   pointer-events: none;
@@ -124,11 +110,9 @@
 
 #startButton {
   position: absolute;
-  top: 10px;
-  left: 300px;
-  transform: translateX(-50%);   /* stays centered */
-  transform-origin: center;       /* keeps hover scaling centered */
-  padding: 5px 5px;
+  left: 20px;
+  top: 70px;
+  padding: 20px 20px;
   font-size: 18px;
   color: gold;
   background-color: black;
@@ -139,9 +123,8 @@
   transition: transform 0.2s ease;
 }
 
-#startButton:hover {
-  transform: translateX(-50%) scale(1.02);  /* stays centered + grows evenly */
-}
+
+
 
 
 
@@ -153,9 +136,9 @@
   color: white;
   font-size: 18px;
   text-align: left;
-  left: 20px;        /* 20px from the left */
-  top: 725px;          /* adjust as needed */
-  width: 750px;       /* set width */
+  left: 20px;        /* 85px from the right */
+  top: 785px;          /* adjust as needed */
+  width: 550px;       /* set width */
   letter-spacing: 5px;   /* added text spacing */
 }
 
@@ -174,7 +157,7 @@
 /* Card spade fade-in and hover zoom */
 #spadeCard {
   position: absolute;
-  top: 50px;
+  top: 140px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -200,7 +183,7 @@
 /* Card pyramid fade-in and hover zoom */
 #pyramidCard {
   position: absolute;
-  top: 135px;
+  top: 225px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -225,7 +208,7 @@
 /* Card pharaoh fade-in and hover zoom */
 #pharaohCard {
   position: absolute;
-  top: 225px;
+  top: 315px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -251,7 +234,7 @@
 /* Card prideflag fade-in and hover zoom */
 #prideflagCard {
   position: absolute;
-  top: 315px;
+  top: 405px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -280,7 +263,7 @@
 /* Card anch fade-in and hover zoom */
 #anchCard {
   position: absolute;
-  top: 405px;
+  top: 495px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -308,7 +291,7 @@
 /* Card rings fade-in and hover zoom */
 #ringsCard {
   position: absolute;
-  top: 495px;
+  top: 585px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -336,7 +319,7 @@
 /* Card sunflowerman fade-in and hover zoom */
 #sunflowermanCard {
   position: absolute;
-  top: 585px;
+  top: 675px;
   left: 20px;
   width: 50px;
   height: 75px;
@@ -365,7 +348,7 @@
 /* Card gaycouple fade-in and hover zoom */
 #gaycoupleCard {
   position: absolute;
-  top: 50px;
+  top: 145px;
   left: 320px;
   width: 50px;
   height: 75px;
@@ -392,7 +375,7 @@
 /* Card anubis fade-in and hover zoom */
 #anubisCard {
   position: absolute;
-  top: 140px;
+  top: 230px;
   left: 320px;
   width: 50px;
   height: 75px;
@@ -421,7 +404,7 @@
 /* Card oillamp fade-in and hover zoom */
 #oillampCard {
   position: absolute;
-  top: 230px;
+  top: 320px;
   left: 320px;
   width: 50px;
   height: 75px;
@@ -449,7 +432,7 @@
 /* Card pottery fade-in and hover zoom */
 #potteryCard {
   position: absolute;
-  top: 320px;
+  top: 410px;
   left: 320px;
   width: 50px;
   height: 75px;
@@ -476,7 +459,7 @@
 
 #spadeCountText {
   position: absolute;
-  top: 80px;
+  top: 175px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -499,7 +482,7 @@
 
 #pyramidCountText {
   position: absolute;
-  top: 170px;
+  top: 260px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -523,7 +506,7 @@
 
 #pharaohCountText {
   position: absolute;
-  top: 260px;
+  top: 350px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -545,7 +528,7 @@
 
 #prideflagCountText {
   position: absolute;
-  top: 350px;
+  top: 440px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -569,7 +552,7 @@
 
 #anchCountText {
   position: absolute;
-  top: 440px;
+  top: 530px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -592,7 +575,7 @@
 
 #ringsCountText {
   position: absolute;
-  top: 530px;
+  top: 620px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -614,7 +597,7 @@
 
 #sunflowermanCountText {
   position: absolute;
-  top: 620px;
+  top: 710px;
   left: 100px;
   font-size: 18px;
   font-weight: bold;
@@ -635,9 +618,10 @@
 
 
 
+
 #gaycoupleCountText {
   position: absolute;
-  top: 80px;
+  top: 180px;
   left: 400px;
   font-size: 18px;
   font-weight: bold;
@@ -661,7 +645,7 @@
 
 #anubisCountText {
   position: absolute;
-  top: 170px;
+  top: 265px;
   left: 400px;
   font-size: 18px;
   font-weight: bold;
@@ -684,7 +668,7 @@
 
 #oillampCountText {
   position: absolute;
-  top: 260px;
+  top: 350px;
   left: 400px;
   font-size: 18px;
   font-weight: bold;
@@ -706,7 +690,7 @@
 
 #potteryCountText {
   position: absolute;
-  top: 350px;
+  top: 445px;
   left: 400px;
   font-size: 18px;
   font-weight: bold;
@@ -757,8 +741,8 @@
 
 #menulogoCountText {
   position: absolute;
-  top: 15px;
-  left: 55px;
+  top: 20px;
+  left: 70px;
   font-size: 18px;
   font-weight: bold;
   color: gold;
@@ -779,10 +763,9 @@
 
 #favoriteListButton {
   position: absolute;
-  left: 475px;
-  top: 10px; /* above Start Game button */
-  transform: translateX(-50%);
-  padding: 5px 5px;
+  left: 175px;
+  top: 70px; /* above Start Game button */
+  padding: 20px 20px;
   font-size: 18px;
   color: gold;
   background-color: black;
@@ -797,10 +780,6 @@
   opacity: 0.7; /* fade in with overlay */
 }
 
-#favoriteListButton:hover {
-  transform: translateX(-50%) scale(1.02);
-}
-
 
 
 
@@ -811,7 +790,7 @@
   width: 175px;
   height: 263px;
   left: 350px;   /* 350px from left */
-  bottom: 20px;  /* 20px from bottom */
+  top: 500px;  /* 20px from bottom */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
